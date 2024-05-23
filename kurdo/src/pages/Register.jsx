@@ -20,7 +20,7 @@ export async function action({ request }) {
       },
       body: JSON.stringify(authData),
     });
-  
+    console.log(response)
     if (response.status === false) {
       return response;
     }

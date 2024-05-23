@@ -3,7 +3,7 @@ import Root from "./pages/Root"
 import Login, {action as loginAction} from "./pages/Login"
 import Home from "./components/Home"
 import {action as logoutAction} from "./pages/Logout"
-import {  tokenLoader } from './util/auth';
+import {  checkAuthLoader, checkLoginLoader, tokenLoader } from './util/auth';
 import Register,{action as registerAction} from "./pages/Register"
 import AddDevice,{action as addDeviceAction} from "./pages/AddDevice"
 import ErrorPage from "./pages/Error"
@@ -16,7 +16,7 @@ function App() {
       {path:"/addDevice",element:<AddDevice/>,action:addDeviceAction},
       {path:"/auth",element:<Login/>,action:loginAction},
       {path:"/register",element:<Register/>,action:registerAction},
-      {path:"logout",action:logoutAction}
+      {path:"logout",action:logoutAction,loader:checkLoginLoader}
     ]}
   ])
 

@@ -36,3 +36,10 @@ export function checkAuthLoader() {
     return redirect('/auth');
   }
 }
+export function checkLoginLoader() {
+  const token = getAuthToken();
+
+  if (token) {
+    return redirect('/');
+  }
+}
