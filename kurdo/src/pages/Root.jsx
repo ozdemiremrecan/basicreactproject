@@ -1,14 +1,11 @@
-import React from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
-import Navigation from './Navigation';
+import { Outlet, useLocation} from 'react-router-dom';
+import "./Root.css"
+import Navigation from '../components/Navigation';
 function Root() {
-  const location = useLocation();
+  const location=useLocation();
   return (
     <>
-      {location.pathname === "/auth" ? "" : <Navigation />}
-      <div id="body-pd" className=''>
-        <Outlet />
-      </div>
+    <Navigation/>
     </>
   );
 }

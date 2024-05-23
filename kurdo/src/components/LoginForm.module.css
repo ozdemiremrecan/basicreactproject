@@ -8,7 +8,7 @@ p{
     background-color: transparent !important;
     width: 75% !important;
     color: #e6e6e6 !important;
-    border: 1px solid #e6e6e650;
+    border: 1px solid #e6e6e650 !important;
     padding: 10px !important; 
 }
 .input::placeholder{
@@ -27,4 +27,7 @@ button{
 }
 button:hover{
     color: #e6e6e6 !important;
+}
+.margin{
+    margin-left: 100px;
 }
