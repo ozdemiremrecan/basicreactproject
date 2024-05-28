@@ -40,3 +40,84 @@
     font-size: 3rem;
     margin-bottom: 20px;
   }
+  .bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+.card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+  box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+  border: none;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.order-card i {
+  font-size: 26px;
+}
+.order-card {
+  color: #fff;
+}
+.card .card-block {
+  padding: 25px;
+}
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+.custom-navbar {
+  background-color: #192c42 !important;
+}
+
+.custom-button {
+  background-color: transparent !important;
+  border: 2px solid white !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  margin: 10px !important;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s !important;
+}
+
+.custom-button:hover {
+  background-color: white !important;
+  color: black !important;
+  transform: scale(1.1) !important;
+}
+@media (max-width: 992px) {
+  .custom-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-button {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-button {
+    font-size: 10px;
+    padding: 4px 8px;
+    margin: 4px;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    text-align: center;
+    width: 100%;
+  }
+}

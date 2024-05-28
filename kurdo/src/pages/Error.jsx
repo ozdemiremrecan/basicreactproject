@@ -1,7 +1,5 @@
 import { useRouteError,Link } from 'react-router-dom';
 
-import PageContent from '../components/PageContent';
-
 function ErrorPage() {
   const error = useRouteError();
     console.log(error)

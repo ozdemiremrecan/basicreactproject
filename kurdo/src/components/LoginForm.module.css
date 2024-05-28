@@ -21,8 +21,8 @@ a{
     text-decoration: none !important;
     color: #25cc91 !important ;
 }
-button{
-    background-color: #25b56e !important;
+div button{
+    background-color: #25b56e ;
     padding: 15px !important;
 }
 button:hover{

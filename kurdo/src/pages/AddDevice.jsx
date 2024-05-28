@@ -7,17 +7,19 @@ export default function AddDevice() {
 export async function action({request}){
     const data = await request.formData();
     const authData = {
-      firstname: data.get('deviceName'),
-      lastname: data.get('deviceMac'),
+      token:localStorage.getItem("token"),
+      deviceName: data.get('deviceName'),
+      deviceMac: data.get('deviceMac'),
     };
-    const response = await fetch('http://localhost:8080/addDevice', {
+    const response = await fetch('http://154.53.180.108:8080/api/addDevice', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(authData),
     });
-  
+    console.log(authData);
+    console.log(response)
     if (response.status === false) {
       return response;
     }
@@ -26,6 +28,5 @@ export async function action({request}){
       throw json({ message: 'Could not registered user.' }, { status: 500 });
     }
   
-    const resData = await response.json();
     return redirect('/');
 }

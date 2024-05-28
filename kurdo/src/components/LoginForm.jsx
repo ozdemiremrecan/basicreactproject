@@ -39,7 +39,7 @@ export default function LoginForm() {
                     <p style={{color:"#e6e6e650 "}}>Don't have an account? <Link to="/register">Sign Up</Link></p>
                   </div>
                   <div>
-                    <button className='btn w-75 mt-5' >Login</button>
+                    <button style={{backgroundColor:"#25B56E"}} className='btn w-75 mt-5' >Login</button>
                   </div>
                   <div className="mt-5">
                     <Link to="/">Go Home</Link>

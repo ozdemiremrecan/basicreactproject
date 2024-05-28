@@ -4,6 +4,7 @@ import ShowDevice from "./ShowDevice";
 import "./Home.css"
 export default function Home() {
   const token = useRouteLoaderData("root");
+  const [ex,setEx]=useState([])
   const [areas, setAreas] = useState(null);
   const [click,setClick]=useState(null)
   const copyAreas=[]
@@ -24,18 +25,36 @@ export default function Home() {
   return (
     <>
       
-      {token && <nav className="navbar navbar-expand-lg bg-body-tertiary mt-5" style={{ backgroundColor: "black" }}>
-        <div className="container-fluid">
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
-              {areas!==null&&areas.map((value,index)=>(
-                <button onClick={()=>{setClick(value)}} className="nav-link" key={index}>{value[0]}</button>
-              ))}
-            </ul>
+      {token && <nav className="navbar navbar-expand-lg mt-5 custom-navbar">
+  <div className="container-fluid">
+    <div className="collapse navbar-collapse">
+      <ul className="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+        {areas !== null && areas.map((value, index) => (
+          <li className="nav-item" key={index}>
+            <button type="button"
+              onClick={() => setClick(value)}
+              className="nav-link m-2 custom-button"
+            >
+              {value[0]}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</nav>}
+      {token&&click!==null&&<ShowDevice info={click}/>}
+      {token&&areas===null&&<div className="homeHeight" style={{marginTop:"100px"}}>
+        <div className="hero-section">
+          <div className="hero-text">
+            <i className="fas fa-home icon"></i>
+            <h1>Device not found</h1>
+            <p>Please Add Device</p>
+            <Link to="/addDevice" className="addDevice">Add Device</Link>
           </div>
         </div>
-      </nav>}
-      {token&&click!==null&&<ShowDevice info={click}/>}
+        
+      </div>}
       {!token &&
         <div className="homeHeight min-vh-100">
         <div className="hero-section">

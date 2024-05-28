@@ -192,3 +192,6 @@ a {
 a {
     text-decoration: none !important;
 }
+.btn-transparent{
+    background-color: transparent !important;
+}

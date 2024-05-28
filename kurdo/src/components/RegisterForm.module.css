@@ -1,0 +1,33 @@
+h1{
+    color: #e6e6e6 !important;
+}
+p{
+    color: #e6e6e6;
+}
+.input{
+    background-color: transparent !important;
+    width: 75% !important;
+    color: #e6e6e6 !important;
+    border: 1px solid #e6e6e650 !important;
+    padding: 10px !important; 
+}
+.input::placeholder{
+    color:#e6e6e650 !important
+}
+label{
+    color: #e6e6e6;
+}
+a{
+    text-decoration: none !important;
+    color: #25cc91 !important ;
+}
+div button{
+    background-color: #25b56e !important;
+    padding: 15px !important;
+}
+button:hover{
+    color: #e6e6e6 !important;
+}
+.margin{
+    margin-left: 100px;
+}

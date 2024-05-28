@@ -40,7 +40,7 @@ function Navigation() {
                   className={`nav_link ${activeLink === 1 ? 'active' : ''}`}
                   onClick={() => handleLinkClick()}
                 >
-                  <i className={`bx bx-layer nav_icon`}></i>
+                  <i class="fa-solid fa-house"></i>
                   <span className="nav_name">Dashboard</span>
                 </NavLink>}
                 {token&&<NavLink
@@ -48,7 +48,7 @@ function Navigation() {
                   className={`nav_link ${activeLink === 1 ? 'active' : ''}`}
                   onClick={() => handleLinkClick()}
                 >
-                  <i className={`bx bx-layer nav_icon`}></i>
+                  <i class="fa-solid fa-laptop"></i>
                   <span className="nav_name">Add Device</span>
                 </NavLink>}
                 
@@ -56,10 +56,10 @@ function Navigation() {
           </div>
           {token && <Form action="/logout" method='post' className="nav_link">
             <i className="bx bx-log-out nav_icon"></i>
-            <span className="nav_name">Sign Out</span>
+            <button className="btn btn-transparent">Sign Out</button>
           </Form>}
           {!token&&<Link to="/auth" className="nav_link">
-            <i className="bx bx-log-out nav_icon"></i>
+          <i class="fa-solid fa-right-to-bracket"></i>
             <span className="nav_name">Login</span>
           </Link>}
         </nav>
